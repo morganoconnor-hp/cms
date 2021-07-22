@@ -1,6 +1,6 @@
-import {Field} from "./FieldInterface";
+import {FieldInterface} from "./FieldInterface";
 
 export interface ModelInterface {
-    field: Field,
+    fields: Array<FieldInterface>,
     table: string
 }

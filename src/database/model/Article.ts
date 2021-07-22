@@ -1,18 +1,17 @@
 import AbstractModel from "./AbstractModel";
 import {ModelInterface} from "../../interface/ModelInterface";
-import {Field} from "../../interface/FieldInterface";
+import {FieldInterface} from "../../interface/FieldInterface";
+import FieldEnum from "../../enum/FieldEnum";
 
 class Article extends AbstractModel implements ModelInterface{
-    id: any;
-    field: Field;
-    table: string;
-
-    constructor(id:number, Field:Field, table:string) {
-        super();
-        this.id = id;
-        this.field = Field;
-        this.table = table;
-    }
+    table: string = 'article';
+    fields: Array<FieldInterface> = [];
 }
 
-export default Article;
+const article = new Article('article', [
+    { field: "id", type: FieldEnum.Number },
+    { field: "title", type: FieldEnum.String },
+    { field: "content", type: FieldEnum.String },
+]);
+
+export default article;
