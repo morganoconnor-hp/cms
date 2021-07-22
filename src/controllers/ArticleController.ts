@@ -1,8 +1,8 @@
 import Article from "../database/model/Article";
 
 class ArticleController {
-    public static getArticles() {
-        return Article.findAll();
+    public static async getArticles() {
+        return await Article.findAll();
     }
 
     public static getSingleArticle(id: Number) {

@@ -6,4 +6,3 @@ import ArticleController from "./controllers/ArticleController";
 
 Routes.build();
 ConfigServer.start();
-ArticleController.getArticles();

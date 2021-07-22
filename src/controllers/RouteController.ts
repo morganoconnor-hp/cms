@@ -1,12 +1,13 @@
 import View from "../templating/View";
+import ArticleController from "./ArticleController";
 
 class RouteController {
     public static showIndexPage = () => {
-        return View.make('home.ejs', 'test');
+        return View.make('home.ejs', []);
     };
 
-    public static showContactPage = () => {
-        return {toto : "toto"};
+    public static showArticlesPage = () => {
+        return ArticleController.getArticles();
     };
 
     public static show404Page = () => {

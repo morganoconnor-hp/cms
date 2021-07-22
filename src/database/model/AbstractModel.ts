@@ -14,12 +14,16 @@ abstract class AbstractModel {
 
     public findAll() {
         const query = new Query(this.table);
-        return query.findAll().then(r => r);
+        return query.findAll().then(r => {
+            r
+        });
     }
 
     public find(id: Number) {
         const query = new Query(this.table);
-        return query.find(id).then(r => r);
+        return query.find(id).then(r => {
+            r
+        });
     }
 }
 
