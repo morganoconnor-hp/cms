@@ -10,8 +10,8 @@ import Response from "../../manager/Response";
  */
 class Server {
     private static instance: Server;
-    SERVER_ADDRESS:any = process.env.SERVER_ADDRESS || 'localhost';
-    SERVER_PORT:any = process.env.SERVER_PORT || 3000;
+    SERVER_ADDRESS:any = process.env.SERVER_ADDRESS || '127.0.0.1';
+    SERVER_PORT:any = process.env.SERVER_PORT || 3652;
 
     /**
      * The Server's constructor should always be private to prevent direct
