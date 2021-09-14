@@ -2,6 +2,7 @@ import Article from "../database/model/Article";
 
 class ArticleController {
     public static async getArticles() {
+        console.log("test", await Article.findAll());
         return await Article.findAll();
     }
 

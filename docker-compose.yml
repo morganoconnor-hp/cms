@@ -16,10 +16,12 @@ services:
   mysql:
     image: mysql:5.7
     container_name: cms-db
-    restart: unless-stopped
+    restart: always
     tty: true
     ports:
-      - 8305:3318
+      - 3306:3306
+    expose:
+      - 3306
     volumes:
       - ${MYSQL_DATA_DIR-./.docker/db/data}:/var/lib/mysql
       - ${MYSQL_LOG_DIR-./.docker/db/logs}:/var/log/mysql
